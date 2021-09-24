@@ -1,0 +1,84 @@
+version: "2.0"
+
+intents:
+  - saludo
+  - despedida
+  - afirmacion
+  - negacion
+  - bot_challenge
+  - chitchat
+  - preguntar
+
+slots:
+  objetivo:
+    type: text
+    influence_conversation: false
+  tiempo:
+    type: text
+    influence_conversation: false
+  lugar:
+    type: text    
+    influence_conversation: false
+
+forms:
+  query_form:
+    objetivo:
+      - type: from_text
+    tiempo:
+      - type: from_text
+    lugar:
+      - type: from_text        
+
+entities:
+  - objetivo
+  - lugar
+  - tiempo   
+
+actions:
+  - query_responce
+
+
+responses:
+  utter_saludo:
+  - text: "Hola!"
+  - text: "Hola, gracias por saludar!"  
+  - text: "Hello!"
+  - text: "Hola, gracias por escribirnos"
+
+  utter_presentacion:
+  - text: "Te cuento, soy el asistente virtual de la oficina TIC
+           y estoy aquí para informarte las cifras de la pandemia por covid-19 en Bucaramanga."
+  - text: "Soy el asistente virtual de la oficina TIC y puedo responderte preguntas acerca
+          de las cifras de la pandemia por Covid-19 en la ciudad de Bucaramanga."     
+  - text: "Por si no sabes, soy el asistente virtual de la Oficina TIC y puedo darte información
+          en cifras acerca del desarrollo de la pandemia por covid-19 aquí en nuestra ciudad Bucaramanga."  
+                    
+  utter_ofrecer_ayuda:
+  - text: ¿Tienes alguna pregunta en específico?, por ejemplo número de casos positivos de ayer ...
+  - text: ¿Deseas saber algo?, por ejemplo cuántos casos negativos la semana pasada ...
+  - text: ¿Qué deseas conocer?, por ejemplo cantidad de hospitalizaciones en este mes ....
+
+  #utter_cheer_up:
+  #- text: "Here is something to cheer you up:"
+  #  image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_despedida:
+  - text: "Chao, que estes bien!"
+  - text: "Chaito, cuídate!"
+  - text: "Hasta luego, aquí estaré por si necesitas algo más."
+  - text: "Fue un placer ayudarte. chao!"
+
+  utter_iamabot:
+  - text: "Soy el asistente virtual inteligente de la oficina TIC."
+  - text: "Soy un robot inteligente desarrollado en la oficna TIC"
+
+  utter_chitchat:
+  - text: "Lo siento, no entiendo lo que dices, este asistente virtual esta creado
+          para temas específicos sobre la pandemia por covid-19, gracias!"  
+  
+  utter_slot_values_query:
+  - text: "Estos fueron los valores que capture Objetivo: {objetivo} - tiempo: {tiempo} y lugar: {lugar}"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

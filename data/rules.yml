@@ -1,0 +1,41 @@
+version: "2.0"
+
+rules:
+
+- rule: Presentación y ofrecer ayuda cada vez que alguien saluda
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_presentacion
+  - action: utter_ofrecer_ayuda
+
+- rule: Cada vez que se despidan nos despedimos
+  steps:
+  - intent: despedida
+  - action: utter_despedida
+
+- rule: Cada vez que alguien pregunta por si eres un bot
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Cada vez que pregunten algo fuera de contexto
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
+- rule: Activar el formulario para poder crear el query
+  steps: 
+  - intent: preguntar
+  - action: query_form
+  - active_loop: query_form  
+
+- rule: Enviar formulario para capturar valores
+  condition:
+  -  active_loop: null
+  steps:
+  - action: query_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: query_responce    

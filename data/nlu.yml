@@ -1,0 +1,158 @@
+version: "2.0"
+
+nlu:
+- intent: saludo
+  examples: |
+    - hola
+    - hello
+    - hi
+    - hey
+    - buenos dias
+    - buenas tardes
+    - buenas noches
+    - buenas buenas
+    - hey hola
+    - holi
+    - hola como estas
+    - hola que mas
+    - todo bien
+    - que tal
+    - que tal el dia de hoy
+    - hola aqui
+    - buenosdias
+    - buenasnoches
+    - buenastardes
+
+- intent: despedida
+  examples: |
+    - hasta luego
+    - cuidate
+    - cuídate
+    - chao
+    - chaito
+    - bye bye
+    - adios
+    - adiós
+    - chau
+    - hablamos despues
+    - te dejo
+    - cambio y fuera
+    - ya me voy
+    - que tenga buena tarde
+    - me despido
+    - gracias chao
+    - que tenga buen resto de día
+    - muy amable
+
+- intent: afirmacion
+  examples: |
+    - si
+    - see
+    - sip
+    - yes
+    - claro que si
+    - por supuesto
+    - correcto
+    - si señor
+    - me gusta
+    - de una
+    - digo que si
+    - R
+    - suena bien
+    - es correcto
+
+- intent: negacion
+  examples: |
+    - no
+    - n
+    - nunca
+    - nop
+    - creo que no
+    - no para nada
+    - no de ninguna manera
+    - no realmente
+    - no me gusta
+    - no pienso eso
+    - de hecho no
+
+- intent: bot_challenge
+  examples: |
+    - eres un bot?
+    - usted es un bot?
+    - ud es un bot?
+    - ud es un robot?
+    - eres un humano?
+    - usted es un humano?
+    - ud es un humano?
+    - ud es una persona?
+    - ud es un trabajador?
+    - usted es una persona?
+    - eres una persona?
+    - estoy hablando con un bot?
+    - estoy hablando con un robot?
+    - estoy hablando con un humano?
+    - estoy hablando con una persona?
+
+- intent: chitchat
+  examples: |
+    - tu me amas?
+    - puede insultarte?
+    - puedo amarte?
+    - marvel o dc
+    - vamos de fiesta hoy
+    - quien es el presidente de india?
+    - no me gustas
+    - capitan america
+    - cristiano ronaldo el mejor del mundo
+    - messi es el mejor
+    - barcelona mejor que el real madrid
+    - hoy gana el bucaramanga
+    - soy del verde
+    - la alcaldia tiene mala gestion 
+    - vamos a robar
+    - quien va a hacer el presidente
+    - uribe hp
+    - uribe paraco
+    - duque marrano
+    - petro presiente
+    - covid de mierda
+    - quiero sexo
+    - quiero tomar
+    - quiero fumar
+    - cuando pal estadio
+    - cuando son las votaciones
+    - cuando es el paro
+    - fuera minesa   
+
+- intent: preguntar
+  examples: |
+    - ¿Cuántas personas resultaron [positivas](objetivo) [ayer](tiempo) en [cabecera](lugar)?
+    - ¿Cuántas personas resultaron [positivas](objetivo) [ayer](tiempo) en el [norte](lugar)?
+    - ¿Cuántas personas resultaron [positivas](objetivo) [ayer](tiempo) en la comuna [san francisco](lugar)?
+    - ¿Cuántas personas resultaron [negativas](objetivo) [ayer](tiempo) en la comuna [occidental](lugar)?
+    - Cuántas personas resultaron [positivas](objetivo) [ayer](tiempo) en [cabecera](lugar) 
+    - Cuántas personas resultaron [positivas](objetivo) (antes de ayer)[tiempo] en (cabecera)[lugar]  
+    - ¿Cuántos casos [negativos](objetivo) se han reportado los [últimos 6 meses](tiempo) en el [centro](lugar)?
+    - ¿Cuántos casos [negativos](objetivo) se han reportado los [últimos 6 meses](tiempo) en [san francisco](lugar)?
+    - ¿Cuántos casos [negativos](objetivo) se han reportado los [últimos 3 meses](tiempo) en [provenza](lugar)?
+    - Cuántos casos [negativos](objetivo) se han reportado los [últimos 4 meses](tiempo) en el [centro](lugar)
+    - Cuántos casos [negativos](objetivo) se han reportado los [últimos 5 meses](tiempo) en el [mutis](lugar) 
+    - ¿Cuántas personas han [fallecido](objetivo) en el [último mes](tiempo) en la comuna [provenza](lugar)?
+    - ¿Cuántas personas han [fallecido](objetivo) en los [últimos 3 mes](tiempo) en la comuna [nororiental](lugar)?
+    - Cuántas personas [fallecieron](objetivo) [ayer](tiempo) en la comuna [real de minas](lugar)?
+    - Cuántas personas [fallecieron](objetivo) [esta semana](tiempo) en la comuna [sur](lugar)?
+    - ¿Cuántas personas han [fallecido](objetivo) en el [último mes](tiempo) en la comuna [provenza](lugar)?
+    - Cuántas personas [muerieron](objetivo) en [esta semana](tiempo) por covid-19?
+    - Cuántas personas [muerieron](objetivo) en [este año](tiempo) por covid-19 de la comuna la [pedregosa](lugar)?
+    - Número de personas en [UCI](objetivo) [esta semana](tiempo)
+    - Número de personas en [UCI](objetivo) [este mes](tiempo)
+    - Número de personas en [cuidados intensivos](objetivo) [este año](tiempo)
+    - cantidad de personas en [cuidados intensivos](objetivo) desde el [inicio](tiempo) de la pandemia
+    - Cantidad de personas [recuperadas](objetivo) este [año](tiempo)
+    - Cantidad de personas [recuperadas](objetivo) este [mes](tiempo)
+    - Cantidad de personas [recuperadas](objetivo) esta [semana](tiempo)
+    - Cantidad de personas [positivas mujeres](objetivo) desde el [inicio](tiempo) del covid-19
+    - Cantidad de personas [positivos hombres](objetivo) desde el [inicio](tiempo) de la pandemia
+    - Cantidad de personas [positivos hombres](objetivo) en este [mes](tiempo)
+    - Cantidad de personas [positivas mujeres](objetivo) en este [mes](tiempo)
+   

@@ -1,0 +1,13 @@
+version: "2.0"
+
+stories:
+
+- story: Curiosos (entran al chat pero no preguntan)
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_presentacion
+  - action: utter_ofrecer_ayuda
+  - intent: negacion
+  - action: utter_despedida
+
